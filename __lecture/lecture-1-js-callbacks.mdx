@@ -5,6 +5,7 @@
 ## Synchronous vs. Asynchronous
 
 ---
+// handling one thread at a time - synchronous
 
 _Synchronous_: Things happens one at a time.
 
@@ -18,6 +19,7 @@ _Asynchronous_: Multiple things happen at the same time.
 
 An app that fetches 2 resources from the network, and then combines the results into a final (needed) result.
 
+-- 
 ---
 
 <img src='./assets/async_sync.png' style='width: 100%;' />
@@ -41,6 +43,8 @@ Both of the important JavaScript programming platforms
 make operations that might take a while **asynchronous**.
 
 _Examples of operations that might take time?_
+
+-
 
 ---
 
@@ -66,6 +70,9 @@ console.log('do third thing');
 ```
 
 _What is expected here?_
+//do first thing
+//do second thing
+//do third thing
 
 ---
 
@@ -79,8 +86,14 @@ setTimeout(function() {
     console.log('do second thing');
 }, 2000);
 console.log('do third thing');
+
+//the setTimeout will not stop and wait. 
 ```
 
+//print to the console
+//first
+//third
+//second
 ---
 
 ### Important

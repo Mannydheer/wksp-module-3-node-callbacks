@@ -15,6 +15,11 @@ Only move on to the next question when you have enough detail that you would be 
 ```
 // Answer here
 
+Set up header and footer partials ejs. 
+Also the form partial which has all the inputs
+Code in the server so that whatever in inputted will be displayed through javascript. 
+
+
 ```
 
 ## Two - `server.js`
@@ -27,9 +32,14 @@ _The NPM site might be a good place to start. Feel free to provide links as rele
 
 ```
 // Answer here
+- The bodyParser module is first required in the server. The bodyParser allows to retreive data that was injected into the body of the document through body.req. Through HTTPrequests, we are POST or PUT data and then we can access this data through body.req. 
+When we are on a login page, we are asking user for an email and password, then we can access this through req.body. 
+In this case, whatever the user inputs, we go get it with req.body and then store it into item. Then with item we do the rest...
 
 ```
-
+BODY PARSER LINKS
+https://alligator.io/nodejs/req-object-in-expressjs/
+https://stackoverflow.com/questions/38306569/what-does-body-parser-do-with-express
 ## Three - `server.js`
 
 Look at lines `23` and `24`. Explain the methods used. How are they different? What are the usecases for each?

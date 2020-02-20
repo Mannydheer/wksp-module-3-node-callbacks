@@ -3,20 +3,26 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
-const { handleHomePage, handleFormData, handle404 } = require('./handlers');
+const {
+    handleHomePage,
+    handleFormData,
+    handle404
+} = require('./handlers');
 
 const PORT = process.env.PORT || 8000;
 
 express()
-    .use(function(req, res, next) {
+    .use(function (req, res, next) {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next();
     })
-	.use(morgan('dev'))
-	.use(express.static('public'))
+    .use(morgan('dev'))
+    .use(express.static('public'))
     .use(bodyParser.json())
-    .use(express.urlencoded({extended: false}))
+    .use(express.urlencoded({
+        extended: false
+    }))
     .set('view engine', 'ejs')
 
     // endpoints
