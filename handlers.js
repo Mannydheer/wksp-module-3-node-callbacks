@@ -7,6 +7,7 @@ const handleHomePage = (req, res) => {
 }
 
 const handleFormData = (req, res) => {
+    //const item = req.body.imte
     const {
         item
     } = req.body;
