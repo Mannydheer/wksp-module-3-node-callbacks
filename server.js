@@ -3,6 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+//when I require this file, I'm requiring the object that contains all those things. 
 const {
     handleHomePage,
     handleFormData,
